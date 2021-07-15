@@ -10,7 +10,7 @@ class FizzBuzz
     private const BUZZ = 'Buzz';
     private const BUZZ_NUMBER = 5;
 
-    public function __invoke($param): int|string
+    public function __invoke(int $param): int|string
     {
         if ($this->isFizz($param) && $this->isBuzz($param)) {
             return self::FIZZ . self::BUZZ;
