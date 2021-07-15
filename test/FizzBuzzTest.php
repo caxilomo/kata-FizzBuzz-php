@@ -13,7 +13,7 @@ class FizzBuzzTest extends TestCase
     public function itShouldReturnOneWhenCallWithOne()
     {
         $fizzBuzzer = new FizzBuzz();
-        $this->assertEquals($fizzBuzzer(1), 1);
+        $this->assertEquals(1, $fizzBuzzer(1));
     }
 
     /**
@@ -22,7 +22,7 @@ class FizzBuzzTest extends TestCase
     public function itShouldReturnTwoWhenCallWithTwo()
     {
         $fizzBuzzer = new FizzBuzz();
-        $this->assertEquals($fizzBuzzer(2), 2);
+        $this->assertEquals(2, $fizzBuzzer(2));
     }
 
     /**
@@ -31,7 +31,7 @@ class FizzBuzzTest extends TestCase
     public function itShouldReturnFizzWhenCallWithThree()
     {
         $fizzBuzzer = new FizzBuzz();
-        $this->assertEquals($fizzBuzzer(3), 'Fizz');
+        $this->assertEquals('Fizz', $fizzBuzzer(3));
     }
 
     /**
@@ -40,7 +40,7 @@ class FizzBuzzTest extends TestCase
     public function itShouldReturnBuzzWhenCallWithFive()
     {
         $fizzBuzzer = new FizzBuzz();
-        $this->assertEquals($fizzBuzzer(5), 'Buzz');
+        $this->assertEquals('Buzz', $fizzBuzzer(5));
     }
 
     /**
@@ -49,7 +49,7 @@ class FizzBuzzTest extends TestCase
     public function itShouldReturnFizzWhenCallWithAMultipleOfThree()
     {
         $fizzBuzzer = new FizzBuzz();
-        $this->assertEquals($fizzBuzzer(6), 'Fizz');
+        $this->assertEquals('Fizz', $fizzBuzzer(6));
     }
 
     /**
@@ -58,7 +58,7 @@ class FizzBuzzTest extends TestCase
     public function itShouldReturnBuzzWhenCallWithAMultipleOfFive()
     {
         $fizzBuzzer = new FizzBuzz();
-        $this->assertEquals($fizzBuzzer(10), 'Buzz');
+        $this->assertEquals('Buzz', $fizzBuzzer(10));
     }
 
     /**
@@ -67,6 +67,33 @@ class FizzBuzzTest extends TestCase
     public function itShouldReturnFizzBuzzWhenCallWithAMultipleOfThreeAndAMultipleOfFive()
     {
         $fizzBuzzer = new FizzBuzz();
-        $this->assertEquals($fizzBuzzer(15), 'FizzBuzz');
+        $this->assertEquals('FizzBuzz', $fizzBuzzer(15));
+    }
+
+    /**
+     * @test
+     */
+    public function itShouldReturnFizzWhenFizzIsTwoAndCallWithTwo()
+    {
+        $fizzBuzzer = new FizzBuzz(2);
+        $this->assertEquals('Fizz', $fizzBuzzer(2));
+    }
+
+    /**
+     * @test
+     */
+    public function itShouldReturnBuzzWhenBuzzIsTwoAndCallWithTwo()
+    {
+        $fizzBuzzer = new FizzBuzz(5, 2);
+        $this->assertEquals('Buzz', $fizzBuzzer(2));
+    }
+
+    /**
+     * @test
+     */
+    public function itShouldReturnFizzBuzzWhenBuzzIsTwoAndCallWithTen()
+    {
+        $fizzBuzzer = new FizzBuzz(5, 2);
+        $this->assertEquals('Buzz', $fizzBuzzer(2));
     }
 }

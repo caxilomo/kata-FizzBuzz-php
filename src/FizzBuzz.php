@@ -5,10 +5,15 @@ namespace App;
 class FizzBuzz
 {
     private const FIZZ = 'Fizz';
-    private const FIZZ_NUMBER = 3;
+    private const FIZZ_DEFAULT_NUMBER = 3;
 
     private const BUZZ = 'Buzz';
-    private const BUZZ_NUMBER = 5;
+    private const BUZZ_DEFAULT_NUMBER = 5;
+
+    public function __construct(
+        private int $fizz = self::FIZZ_DEFAULT_NUMBER,
+        private int $buzz = self::BUZZ_DEFAULT_NUMBER
+    ) {}
 
     public function __invoke(int $param): int|string
     {
@@ -29,11 +34,11 @@ class FizzBuzz
 
     private function isFizz($param): bool
     {
-        return $param % self::FIZZ_NUMBER === 0;
+        return $param % $this->fizz === 0;
     }
 
     private function isBuzz($param): bool
     {
-        return $param % self::BUZZ_NUMBER === 0;
+        return $param % $this->buzz === 0;
     }
 }
