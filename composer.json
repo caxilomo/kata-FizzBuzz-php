@@ -1,0 +1,14 @@
+{
+    "name": "caxilomo/kata-fizz-buzz-php",
+    "description": "Fizz Buzz kata solve in php with TDD and pair programing",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "caxilomo",
+            "email": "3996185+caxilomo@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
